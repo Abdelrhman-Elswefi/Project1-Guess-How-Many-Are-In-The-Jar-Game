@@ -36,7 +36,8 @@ public class Jar {
 		int guess;
 		
 		do{
-			System.out.print("Guess: ");
+			System.out.printf("How many %s are in the jar? Pick a number betwwen 1 and %d: ",
+					itemName, maxNumberItems);
 			guess = scanner.nextInt();
 			
 			if(guess > maxNumberItems){
@@ -57,8 +58,7 @@ public class Jar {
 		}else if(guess < randomNumber){
 			System.out.println("Your guess is too low");
 		}else{
-			System.out.printf("Congratulations - you guessed that there are %d %s in the jar! It took you %d guess(es) to get right.",
-					randomNumber, itemName, counter);
+			System.out.printf("Congrats! You got it in %d attempts!%n", counter);
 		}	
 	}
 
